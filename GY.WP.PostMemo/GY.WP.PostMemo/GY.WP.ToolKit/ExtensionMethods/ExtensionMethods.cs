@@ -16,6 +16,11 @@ namespace GY.WP.ToolKit.ExtensionMethods
     /// </summary>
     public static class ExtensionMethods
     {
+        public static bool IsNullOrEmpty(this string source)
+        {
+            return string.IsNullOrEmpty(source);
+        }
+
         /// <summary>
         ///
         /// </summary>
