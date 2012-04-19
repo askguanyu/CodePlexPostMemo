@@ -5,14 +5,17 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:c4fControls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+    >
 
     <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -22,36 +25,56 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,10,0,10">
+            <TextBlock x:Name="ApplicationTitle" Text="Post Memo"/>
+            <!--<TextBlock x:Name="PageTitle" Text="New"/>-->
         </StackPanel>
 
-        <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items}" SelectionChanged="MainListBox_SelectionChanged">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,80">
+            <ListBox x:Name="listBoxMemoList"
+                     Margin="0,0,0,100"
+                     ItemsSource="{Binding MemoList}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                      <StackPanel Margin="0,0,0,17" Width="432" Height="78">
-                          <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                          <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                      </StackPanel>
+                        <c4fControls:ChatBubble Margin="10,0,10,20"
+                                                Width="460"
+                                                ChatBubbleDirection="LowerRight">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Content}"
+                                           TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding DateTimeString}"
+                                           FontSize="16"
+                                           TextAlignment="Right"
+                                           HorizontalAlignment="Right"
+                                           Width="460"/>
+                            </StackPanel>
+                        </c4fControls:ChatBubble>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <StackPanel VerticalAlignment="Bottom">
+            <c4fControls:ChatBubbleTextBox Name="chatBubbleTextBoxMemo"
+                                           Opacity="0.9"
+                                           AcceptsReturn="True"
+                                           ChatBubbleDirection="LowerRight"
+                                           TextChanged="chatBubbleTextBoxMemo_TextChanged"
+                                           MaxLength="1000"
+                                           Margin="10,0,10,0"
+                                           />
+            </StackPanel>
         </Grid>
     </Grid>
- 
+
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.5">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" x:Name="appBarPost" Text="Post" Click="appBarPost_Click"/>
+            <!--<shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>-->
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

@@ -45,6 +45,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -53,7 +55,25 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtensionMethods\ExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\IsolatedSettingsUtility.cs" />
+    <Compile Include="Utility\IsolatedStorageUtility.cs" />
+    <Compile Include="Utility\PasswordStrength.cs" />
+    <Compile Include="Utility\WaveHeaderWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\Coding4Fun.Phone.Controls.dll" />
+    <Content Include="References\Coding4Fun.Phone.Controls.Toolkit.dll" />
+    <Content Include="References\Coding4Fun.Phone.Site.Controls.dll" />
+    <Content Include="References\Microsoft.Live.Controls.dll" />
+    <Content Include="References\Microsoft.Live.dll" />
+    <Content Include="References\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="References\Microsoft.Practices.Prism.dll" />
+    <Content Include="References\Microsoft.Practices.Prism.Interactivity.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
