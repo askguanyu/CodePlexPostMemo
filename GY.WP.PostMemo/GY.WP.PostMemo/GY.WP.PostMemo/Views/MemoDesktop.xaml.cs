@@ -7,6 +7,7 @@ namespace GY.WP.PostMemo.Views
 {
     using System;
     using System.Collections.ObjectModel;
+    using System.Linq;
     using System.Windows;
     using GY.WP.PostMemo.Localization;
     using GY.WP.PostMemo.Models;
@@ -34,7 +35,6 @@ namespace GY.WP.PostMemo.Views
         private void InitializeAppBar()
         {
             this.ApplicationBar = new ApplicationBar();
-            this.ApplicationBar.Opacity = 0.5;
 
             ApplicationBarIconButton appBarPost = new ApplicationBarIconButton(new Uri("/Images/appbar.send.rest.png", UriKind.Relative)) { Text = AppResources.AppBar_Post };
             appBarPost.Click += appBarPost_Click;
@@ -77,6 +77,11 @@ namespace GY.WP.PostMemo.Views
                         break;
                     case MessageBoxResult.OK:
                     case MessageBoxResult.Yes:
+                        while (NavigationService.BackStack.Any())
+                        {
+                            NavigationService.RemoveBackEntry();
+                        }
+                        e.Cancel = false;
                         break;
                     default:
                         break;
@@ -96,8 +101,20 @@ namespace GY.WP.PostMemo.Views
                 var newMemo = new MemoModel { Content = this.chatBubbleTextBoxMemo.Text };
                 this.MemoList.Add(newMemo);
                 this.listBoxMemoList.ScrollIntoView(newMemo);
-                this.chatBubbleTextBoxMemo.Text = string.Empty; 
+                this.chatBubbleTextBoxMemo.Text = string.Empty;
             }
+        }
+
+        private void menuItemDelete_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var memoModel = ((MemoModel)(((MenuItem)(sender)).CommandParameter));
+            this.MemoList.Remove(memoModel);
+        }
+
+        private void menuItemCopy_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var memoModel = ((MemoModel)(((MenuItem)(sender)).CommandParameter));
+            Clipboard.SetText(memoModel.Content);
         }
     }
 }

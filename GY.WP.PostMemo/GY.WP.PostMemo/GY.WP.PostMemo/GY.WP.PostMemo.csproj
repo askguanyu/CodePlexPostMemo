@@ -92,6 +92,8 @@
     <Compile Include="Localization\LocalizedStrings.cs" />
     <Compile Include="Models\MemoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueConverters\DateTimeFormatHelper.cs" />
+    <Compile Include="ValueConverters\DateTimeToStringConverter.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MemoDesktop.xaml.cs">
@@ -113,14 +115,10 @@
     <None Include="Properties\WMAppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Background.png" />
     <Content Include="Images\appbar.send.rest.png" />
     <Content Include="SplashScreenImage.jpg" />
-    <Content Include="Background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GY.WP.ToolKit\GY.WP.ToolKit.csproj">

@@ -29,7 +29,7 @@ namespace GY.WP.PostMemo.Models
         public MemoModel()
         {
             this.CreateUtcTime = DateTime.UtcNow;
-            this.PostDateTime = DateTime.Now;
+            this._postDateTime = DateTime.Now;
         }
 
         /// <summary>

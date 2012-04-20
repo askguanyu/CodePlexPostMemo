@@ -123,4 +123,16 @@
   <data name="AppBar_Post" xml:space="preserve">
     <value>Post</value>
   </data>
+  <data name="InvalidDateTimeArgument" xml:space="preserve">
+    <value>Invalid DateTime Argument</value>
+  </data>
+  <data name="MenuItem_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="MenuItem_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MenuItem_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
 </root>

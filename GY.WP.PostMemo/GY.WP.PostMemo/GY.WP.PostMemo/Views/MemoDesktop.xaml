@@ -10,62 +10,79 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:c4fControls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
-    >
+    toolkit:TiltEffect.IsTiltEnabled="True" 
+    xmlns:my="clr-namespace:GY.WP.PostMemo.ValueConverters">
 
-    <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
+    <phone:PhoneApplicationPage.Resources>
+        <toolkit:DailyDateTimeConverter x:Key="DailyDateTimeConverter"/>
+        <my:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
+    </phone:PhoneApplicationPage.Resources>
+
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,10,0,10">
+        <StackPanel x:Name="TitlePanel" VerticalAlignment="Top" Margin="10,0,0,10">
             <TextBlock x:Name="ApplicationTitle" Text="Post Memo"/>
-            <!--<TextBlock x:Name="PageTitle" Text="New"/>-->
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,80">
+        <Grid x:Name="ContentPanel" Margin="0,30,0,90">
             <ListBox x:Name="listBoxMemoList"
-                     Margin="0,0,0,70"
+                     VerticalAlignment="Bottom"
                      >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <c4fControls:ChatBubble Margin="10,0,10,20"
+                                                Name="chatBubbleDisplayMemo"
                                                 Width="460"
                                                 ChatBubbleDirection="LowerRight">
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Name="menuItemCopy"
+                                                      Header="{Binding Path=MenuItem_Copy, Source={StaticResource LocalizedStrings}}"
+                                                      Tap="menuItemCopy_Tap"
+                                                      CommandParameter="{Binding}"/>
+                                    <toolkit:MenuItem Name="menuItemDelete"
+                                                      Header="{Binding Path=MenuItem_Delete, Source={StaticResource LocalizedStrings}}"
+                                                      Tap="menuItemDelete_Tap"
+                                                      CommandParameter="{Binding}"/>
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel>
                                 <TextBlock Text="{Binding Content}"
+                                           Name="textBlockContent"
+                                           Foreground="LightYellow"
                                            TextWrapping="Wrap"/>
-                                <TextBlock Text="{Binding DateTimeString}"
+                                <TextBlock Text="{Binding PostDateTime, Converter={StaticResource DateTimeToStringConverter}}"
                                            FontSize="16"
                                            TextAlignment="Right"
                                            HorizontalAlignment="Right"
+                                           Foreground="LightYellow"
                                            Width="460"/>
                             </StackPanel>
                         </c4fControls:ChatBubble>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <StackPanel VerticalAlignment="Bottom">
-                <c4fControls:ChatBubbleTextBox Name="chatBubbleTextBoxMemo"
+        </Grid>
+
+        <StackPanel VerticalAlignment="Bottom">
+            <c4fControls:ChatBubbleTextBox Name="chatBubbleTextBoxMemo"
                                            Opacity="0.9"
+                                           FontSize="40"
                                            AcceptsReturn="True"
+                                           TextWrapping="Wrap"
                                            ChatBubbleDirection="LowerRight"
                                            MaxLength="1000"
                                            Margin="10,0,10,0"
                                            />
-            </StackPanel>
-        </Grid>
+        </StackPanel>
     </Grid>
 
-    <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar Opacity="0.5">
+        <shell:ApplicationBar>
             <!--<shell:ApplicationBarIconButton IconUri="/Images/appbar.send.rest.png" x:Name="appBarPost" Text="Post" Click="appBarPost_Click"/>-->
             <shell:ApplicationBar.MenuItems>
                 <!--<shell:ApplicationBarMenuItem x:Name="appBarFullView" Text="Full View"/>-->

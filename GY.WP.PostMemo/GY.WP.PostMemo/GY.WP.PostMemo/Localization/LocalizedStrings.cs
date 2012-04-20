@@ -1,21 +1,34 @@
-﻿using System;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="LocalizedStrings.cs" company="GY Corporation">
+//     Copyright (c) GY Corporation. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace GY.WP.PostMemo.Localization
 {
+    /// <summary>
+    ///
+    /// </summary>
     public class LocalizedStrings
     {
-        public string AppBar_Post
+        /// <summary>
+        ///Gets
+        /// </summary>
+        public string MenuItem_Done
         {
-            get { return AppResources.AppBar_Post; }
+            get { return AppResources.MenuItem_Done; }
+        }
+
+        /// <summary>
+        ///Gets
+        /// </summary>
+        public string MenuItem_Delete
+        {
+            get { return AppResources.MenuItem_Delete; }
+        }
+
+        public string MenuItem_Copy
+        {
+            get { return AppResources.MenuItem_Copy; }
         }
     }
 }

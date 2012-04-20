@@ -77,5 +77,41 @@ namespace GY.WP.PostMemo.Localization {
                 return ResourceManager.GetString("AppBar_Post", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid DateTime Argument.
+        /// </summary>
+        public static string InvalidDateTimeArgument {
+            get {
+                return ResourceManager.GetString("InvalidDateTimeArgument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        public static string MenuItem_Copy {
+            get {
+                return ResourceManager.GetString("MenuItem_Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string MenuItem_Delete {
+            get {
+                return ResourceManager.GetString("MenuItem_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done.
+        /// </summary>
+        public static string MenuItem_Done {
+            get {
+                return ResourceManager.GetString("MenuItem_Done", resourceCulture);
+            }
+        }
     }
 }
