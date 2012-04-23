@@ -70,6 +70,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string AppBar_Help {
+            get {
+                return ResourceManager.GetString("AppBar_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Post.
         /// </summary>
         public static string AppBar_Post {
@@ -133,6 +142,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string PivotItemHeader_About {
+            get {
+                return ResourceManager.GetString("PivotItemHeader_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ALL.
         /// </summary>
         public static string PivotItemHeader_All {
@@ -147,6 +165,15 @@ namespace GY.WP.PostMemo.Localization {
         public static string PivotItemHeader_Done {
             get {
                 return ResourceManager.GetString("PivotItemHeader_Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string PivotItemHeader_Help {
+            get {
+                return ResourceManager.GetString("PivotItemHeader_Help", resourceCulture);
             }
         }
         

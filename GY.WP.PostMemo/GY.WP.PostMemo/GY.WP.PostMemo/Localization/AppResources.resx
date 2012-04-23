@@ -120,6 +120,9 @@
   <data name="AppBar_FullView" xml:space="preserve">
     <value>Full View</value>
   </data>
+  <data name="AppBar_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="AppBar_Post" xml:space="preserve">
     <value>Post</value>
   </data>
@@ -141,11 +144,17 @@
   <data name="MsgBox_Exit" xml:space="preserve">
     <value>Exit ?</value>
   </data>
+  <data name="PivotItemHeader_About" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="PivotItemHeader_All" xml:space="preserve">
     <value>ALL</value>
   </data>
   <data name="PivotItemHeader_Done" xml:space="preserve">
     <value>DONE</value>
+  </data>
+  <data name="PivotItemHeader_Help" xml:space="preserve">
+    <value>Help</value>
   </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
     <value>TODO</value>

@@ -114,6 +114,9 @@
     <Compile Include="Views\MemoFullView.xaml.cs">
       <DependentUpon>MemoFullView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MemoHelp.xaml.cs">
+      <DependentUpon>MemoHelp.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -128,6 +131,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MemoHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
@@ -136,6 +143,8 @@
   <ItemGroup>
     <Content Include="ApplicationIcon.png" />
     <Resource Include="Background.png" />
+    <Content Include="Images\appbar.feature.settings.rest.png" />
+    <Content Include="Images\appbar.questionmark.rest.png" />
     <Content Include="Images\appbar.send.rest.png" />
     <Resource Include="Images\icon173.png" />
     <Resource Include="Images\icon200.png" />
