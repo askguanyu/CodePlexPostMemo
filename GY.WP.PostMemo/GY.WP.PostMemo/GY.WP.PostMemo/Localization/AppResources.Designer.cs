@@ -113,5 +113,14 @@ namespace GY.WP.PostMemo.Localization {
                 return ResourceManager.GetString("MenuItem_Done", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit ?.
+        /// </summary>
+        public static string MsgBox_Exit {
+            get {
+                return ResourceManager.GetString("MsgBox_Exit", resourceCulture);
+            }
+        }
     }
 }

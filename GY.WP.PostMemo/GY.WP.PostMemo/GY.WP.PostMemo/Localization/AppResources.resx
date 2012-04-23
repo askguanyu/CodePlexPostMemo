@@ -135,4 +135,7 @@
   <data name="MenuItem_Done" xml:space="preserve">
     <value>Done</value>
   </data>
+  <data name="MsgBox_Exit" xml:space="preserve">
+    <value>Exit ?</value>
+  </data>
 </root>

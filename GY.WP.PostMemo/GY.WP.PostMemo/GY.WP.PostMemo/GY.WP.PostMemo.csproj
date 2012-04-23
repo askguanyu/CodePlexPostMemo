@@ -118,7 +118,10 @@
     <Content Include="ApplicationIcon.png" />
     <Content Include="Background.png" />
     <Content Include="Images\appbar.send.rest.png" />
-    <Content Include="SplashScreenImage.jpg" />
+    <Resource Include="Images\icon173.png" />
+    <Resource Include="Images\icon200.png" />
+    <Resource Include="Images\icon62.png" />
+    <Resource Include="Images\icon99.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GY.WP.ToolKit\GY.WP.ToolKit.csproj">

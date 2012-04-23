@@ -68,7 +68,7 @@ namespace GY.WP.PostMemo.Views
             }
             else
             {
-                switch (MessageBox.Show("", "Exit ?", MessageBoxButton.OKCancel))
+                switch (MessageBox.Show("", AppResources.MsgBox_Exit, MessageBoxButton.OKCancel))
                 {
                     case MessageBoxResult.Cancel:
                     case MessageBoxResult.No:
