@@ -88,11 +88,37 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Feedback.
+        /// </summary>
+        public static string AppFeedback {
+            get {
+                return ResourceManager.GetString("AppFeedback", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Post Memo.
         /// </summary>
         public static string AppName {
             get {
                 return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roadmap
+        ///
+        ///V 1.1
+        ///Full view memo list group by date;
+        ///
+        ///V 1.0
+        ///Fast launching app;
+        ///Fast record your spark;
+        ///Full manager your memos;.
+        /// </summary>
+        public static string AppRoadmap {
+            get {
+                return ResourceManager.GetString("AppRoadmap", resourceCulture);
             }
         }
         

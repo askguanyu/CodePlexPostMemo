@@ -60,5 +60,10 @@ namespace GY.WP.PostMemo.Localization
         {
             get { return AppResources.PivotItemHeader_About; }
         }
+
+        public string AppFeedback
+        {
+            get { return AppResources.AppFeedback; }
+        }
     }
 }

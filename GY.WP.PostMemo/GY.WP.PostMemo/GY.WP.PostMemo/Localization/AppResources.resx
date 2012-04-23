@@ -126,8 +126,22 @@
   <data name="AppBar_Post" xml:space="preserve">
     <value>Post</value>
   </data>
+  <data name="AppFeedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
   <data name="AppName" xml:space="preserve">
     <value>Post Memo</value>
+  </data>
+  <data name="AppRoadmap" xml:space="preserve">
+    <value>Roadmap
+
+V 1.1
+Full view memo list group by date;
+
+V 1.0
+Fast launching app;
+Fast record your spark;
+Full manager your memos;</value>
   </data>
   <data name="InvalidDateTimeArgument" xml:space="preserve">
     <value>Invalid DateTime Argument</value>

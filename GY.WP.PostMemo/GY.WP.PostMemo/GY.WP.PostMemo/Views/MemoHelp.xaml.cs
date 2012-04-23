@@ -5,18 +5,11 @@
 //-----------------------------------------------------------------------
 namespace GY.WP.PostMemo.Views
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
+    using System.Reflection;
     using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Documents;
-    using System.Windows.Input;
-    using System.Windows.Media;
-    using System.Windows.Media.Animation;
-    using System.Windows.Shapes;
+    using GY.WP.PostMemo.Localization;
     using Microsoft.Phone.Controls;
+    using Microsoft.Phone.Tasks;
 
     /// <summary>
     ///
@@ -29,6 +22,13 @@ namespace GY.WP.PostMemo.Views
         public MemoHelp()
         {
             InitializeComponent();
+            Dispatcher.BeginInvoke(() => { textBlockVersion.Text = "V " + Assembly.GetExecutingAssembly().FullName.Split(',')[1].Split('=')[1]; });
+            Dispatcher.BeginInvoke(() => { textBlockRoadmap.Text = AppResources.AppRoadmap; });
+        }
+
+        private void buttonFeedback_Click(object sender, RoutedEventArgs e)
+        {
+            new MarketplaceReviewTask().Show();
         }
     }
 }
