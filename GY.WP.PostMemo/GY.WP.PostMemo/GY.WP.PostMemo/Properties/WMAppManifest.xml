@@ -3,7 +3,9 @@
   <App xmlns="" ProductID="{58aad38c-e9ea-49b6-a7c8-f79cdbf98a10}" Title="+ Post Memo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="GY.WP.PostMemo author" Description="Sample description" Publisher="GY.WP.PostMemo">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
-        
+        <Capability Name="ID_CAP_MEDIALIB"/>
+        <Capability Name="ID_CAP_NETWORKING"/>
+        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT"/>
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="Views/MemoDesktop.xaml" />
