@@ -31,6 +31,7 @@
         <Grid x:Name="ContentPanel" Margin="0,30,0,90">
             <ListBox x:Name="listBoxMemoList"
                      VerticalAlignment="Bottom"
+                     ItemsSource="{Binding MemoList}"
                      >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -51,11 +52,11 @@
                                 </toolkit:ContextMenu>
                             </toolkit:ContextMenuService.ContextMenu>
                             <StackPanel>
-                                <TextBlock Text="{Binding Content}"
+                                <TextBlock Text="{Binding MemoContent}"
                                            Name="textBlockContent"
                                            Foreground="LightYellow"
                                            TextWrapping="Wrap"/>
-                                <TextBlock Text="{Binding PostDateTime, Converter={StaticResource DateTimeToStringConverter}}"
+                                <TextBlock Text="{Binding MemoDateTime, Converter={StaticResource DateTimeToStringConverter}}"
                                            FontSize="16"
                                            TextAlignment="Right"
                                            HorizontalAlignment="Right"

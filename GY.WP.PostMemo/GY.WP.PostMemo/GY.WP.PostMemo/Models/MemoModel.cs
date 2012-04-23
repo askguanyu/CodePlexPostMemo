@@ -6,86 +6,118 @@
 namespace GY.WP.PostMemo.Models
 {
     using System;
-    using Microsoft.Practices.Prism.ViewModel;
+    using System.ComponentModel;
+    using System.Data.Linq;
+    using System.Data.Linq.Mapping;
 
     /// <summary>
     ///
     /// </summary>
-    public class MemoModel : NotificationObject
+    [Table]
+    public class MemoModel : INotifyPropertyChanged, INotifyPropertyChanging
     {
-        /// <summary>
-        ///
-        /// </summary>
-        private DateTime _postDateTime;
-
-        /// <summary>
-        ///
-        /// </summary>
-        private string _content;
-
-        /// <summary>
-        ///
-        /// </summary>
         public MemoModel()
         {
-            this.CreateUtcTime = DateTime.UtcNow;
-            this._postDateTime = DateTime.Now;
+            this._memoDateTime = DateTime.Now;
+            this._isComplete = false;
         }
 
-        /// <summary>
-        ///Gets or sets
-        /// </summary>
-        public DateTime PostDateTime
-        {
-            get
-            {
-                return _postDateTime;
-            }
+        // Define ID: private field, public property, and database column.
+        private int _memoId;
 
+        [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
+        public int MemoId
+        {
+            get { return _memoId; }
             set
             {
-                if (value != _postDateTime)
+                if (_memoId != value)
                 {
-                    _postDateTime = value;
-                    RaisePropertyChanged(() => PostDateTime);
+                    NotifyPropertyChanging("MemoId");
+                    _memoId = value;
+                    NotifyPropertyChanged("MemoId");
                 }
             }
         }
 
-        /// <summary>
-        ///Gets or sets
-        /// </summary>
-        public DateTime CreateUtcTime
-        {
-            get;
-            private set;
-        }
+        // Define Content: private field, public property, and database column.
+        private string _memoContent;
 
-        public string DateTimeString
+        [Column]
+        public string MemoContent
         {
-            get
-            {
-                return this.PostDateTime.ToString();
-            }
-        }
-
-        /// <summary>
-        ///Gets or sets
-        /// </summary>
-        public string Content
-        {
-            get
-            {
-                return _content;
-            }
-
+            get { return _memoContent; }
             set
             {
-                if (value != _content)
+                if (_memoContent != value)
                 {
-                    _content = value;
-                    RaisePropertyChanged(() => Content);
+                    NotifyPropertyChanging("MemoContent");
+                    _memoContent = value;
+                    NotifyPropertyChanged("MemoContent");
                 }
+            }
+        }
+
+        // Define Create DateTime: private field, public property, and database column.
+        private DateTime _memoDateTime;
+
+        [Column]
+        public DateTime MemoDateTime
+        {
+            get { return _memoDateTime; }
+            set
+            {
+                if (_memoDateTime != value)
+                {
+                    NotifyPropertyChanging("MemoDateTime");
+                    _memoDateTime = value;
+                    NotifyPropertyChanged("MemoDateTime");
+                }
+            }
+        }
+
+        // Define completion value: private field, public property, and database column.
+        private bool _isComplete;
+
+        [Column]
+        public bool IsComplete
+        {
+            get { return _isComplete; }
+            set
+            {
+                if (_isComplete != value)
+                {
+                    NotifyPropertyChanging("IsComplete");
+                    _isComplete = value;
+                    NotifyPropertyChanged("IsComplete");
+                }
+            }
+        }
+
+        // Version column aids update performance.
+        [Column(IsVersion = true)]
+        private Binary _version;
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // Used to notify that a property changed
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        // Used to notify that a property is about to change
+        private void NotifyPropertyChanging(string propertyName)
+        {
+            if (PropertyChanging != null)
+            {
+                PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
             }
         }
     }

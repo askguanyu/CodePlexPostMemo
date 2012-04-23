@@ -53,26 +53,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Coding4Fun.Phone.Controls">
-      <HintPath>..\GY.WP.ToolKit\References\Coding4Fun.Phone.Controls.dll</HintPath>
+    <Reference Include="Coding4Fun.Phone.Controls, Version=1.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\GY.WP.ToolKit\Library\Coding4Fun.Phone.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Coding4Fun.Phone.Controls.Toolkit">
-      <HintPath>..\GY.WP.ToolKit\References\Coding4Fun.Phone.Controls.Toolkit.dll</HintPath>
+    <Reference Include="Coding4Fun.Phone.Controls.Toolkit, Version=1.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\GY.WP.ToolKit\Library\Coding4Fun.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Coding4Fun.Phone.Site.Controls">
-      <HintPath>..\GY.WP.ToolKit\References\Coding4Fun.Phone.Site.Controls.dll</HintPath>
+    <Reference Include="Coding4Fun.Phone.Site.Controls, Version=1.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\GY.WP.ToolKit\Library\Coding4Fun.Phone.Site.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Live">
+      <HintPath>..\GY.WP.ToolKit\Library\Microsoft.Live.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Live.Controls">
+      <HintPath>..\GY.WP.ToolKit\Library\Microsoft.Live.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
-    <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>..\GY.WP.ToolKit\References\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>..\GY.WP.ToolKit\Library\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
-    <Reference Include="Microsoft.Practices.Prism">
-      <HintPath>..\GY.WP.ToolKit\References\Microsoft.Practices.Prism.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\GY.WP.ToolKit\Library\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.Prism.Interactivity">
-      <HintPath>..\GY.WP.ToolKit\References\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\GY.WP.ToolKit\Library\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -84,18 +91,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Constants.cs" />
     <Compile Include="Localization\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Localization\LocalizedStrings.cs" />
+    <Compile Include="Models\MemoDataContext.cs" />
     <Compile Include="Models\MemoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueConverters\DateTimeFormatHelper.cs" />
     <Compile Include="ValueConverters\DateTimeToStringConverter.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MemoDesktopViewModel.cs" />
     <Compile Include="Views\MemoDesktop.xaml.cs">
       <DependentUpon>MemoDesktop.xaml</DependentUpon>
     </Compile>

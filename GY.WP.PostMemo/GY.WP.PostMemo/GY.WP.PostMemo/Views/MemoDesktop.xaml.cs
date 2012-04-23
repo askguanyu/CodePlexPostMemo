@@ -6,11 +6,11 @@
 namespace GY.WP.PostMemo.Views
 {
     using System;
-    using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows;
     using GY.WP.PostMemo.Localization;
     using GY.WP.PostMemo.Models;
+    using GY.WP.PostMemo.ViewModels;
     using GY.WP.ToolKit.ExtensionMethods;
     using Microsoft.Phone.Controls;
     using Microsoft.Phone.Shell;
@@ -20,6 +20,8 @@ namespace GY.WP.PostMemo.Views
     /// </summary>
     public partial class MemoDesktop : PhoneApplicationPage
     {
+        public MemoDesktopViewModel ViewModel { get; private set; }
+
         /// <summary>
         ///
         /// </summary>
@@ -28,8 +30,8 @@ namespace GY.WP.PostMemo.Views
             InitializeComponent();
             InitializeAppBar();
 
-            this.MemoList = new ObservableCollection<MemoModel>();
-            this.listBoxMemoList.ItemsSource = this.MemoList;
+            this.ViewModel = new MemoDesktopViewModel();
+            this.DataContext = this.ViewModel;
         }
 
         private void InitializeAppBar()
@@ -42,15 +44,6 @@ namespace GY.WP.PostMemo.Views
 
             ApplicationBarMenuItem appBarFullView = new ApplicationBarMenuItem(AppResources.AppBar_FullView);
             this.ApplicationBar.MenuItems.Add(appBarFullView);
-        }
-
-        /// <summary>
-        ///Gets or sets
-        /// </summary>
-        public ObservableCollection<MemoModel> MemoList
-        {
-            get;
-            set;
         }
 
         /// <summary>
@@ -98,8 +91,8 @@ namespace GY.WP.PostMemo.Views
         {
             if (!this.chatBubbleTextBoxMemo.Text.IsNullOrEmpty())
             {
-                var newMemo = new MemoModel { Content = this.chatBubbleTextBoxMemo.Text };
-                this.MemoList.Add(newMemo);
+                var newMemo = new MemoModel { MemoContent = this.chatBubbleTextBoxMemo.Text };
+                this.ViewModel.AddMemo(newMemo);
                 this.listBoxMemoList.ScrollIntoView(newMemo);
                 this.chatBubbleTextBoxMemo.Text = string.Empty;
             }
@@ -108,13 +101,13 @@ namespace GY.WP.PostMemo.Views
         private void menuItemDelete_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             var memoModel = ((MemoModel)(((MenuItem)(sender)).CommandParameter));
-            this.MemoList.Remove(memoModel);
+            this.ViewModel.DeleteMemo(memoModel);
         }
 
         private void menuItemCopy_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             var memoModel = ((MemoModel)(((MenuItem)(sender)).CommandParameter));
-            Clipboard.SetText(memoModel.Content);
+            Clipboard.SetText(memoModel.MemoContent);
         }
     }
 }

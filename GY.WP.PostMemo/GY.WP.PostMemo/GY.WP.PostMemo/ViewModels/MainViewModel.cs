@@ -59,18 +59,6 @@ namespace GY.WP.PostMemo
         public void LoadData()
         {
             // Load data
-            this.MemoList.Add(new MemoModel { Content = "hello1" });
-            this.MemoList.Add(new MemoModel { Content = "hello2" });
-            this.MemoList.Add(new MemoModel { Content = "hello3" });
-            this.MemoList.Add(new MemoModel { Content = "hello" });
-            this.MemoList.Add(new MemoModel { Content = "hello" });
-            this.MemoList.Add(new MemoModel { Content = "hello" });
-            this.MemoList.Add(new MemoModel { Content = "hello" });
-            this.MemoList.Add(new MemoModel { Content = "hello" });
-            this.MemoList.Add(new MemoModel { Content = "hello" });
-            this.MemoList.Add(new MemoModel { Content = "hello97" });
-            this.MemoList.Add(new MemoModel { Content = "hello98" });
-            this.MemoList.Add(new MemoModel { Content = "hello99" });
 
             this.IsDataLoaded = true;
         }

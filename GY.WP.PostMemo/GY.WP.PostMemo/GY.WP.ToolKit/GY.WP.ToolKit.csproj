@@ -66,14 +66,14 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="References\Coding4Fun.Phone.Controls.dll" />
-    <Content Include="References\Coding4Fun.Phone.Controls.Toolkit.dll" />
-    <Content Include="References\Coding4Fun.Phone.Site.Controls.dll" />
-    <Content Include="References\Microsoft.Live.Controls.dll" />
-    <Content Include="References\Microsoft.Live.dll" />
-    <Content Include="References\Microsoft.Phone.Controls.Toolkit.dll" />
-    <Content Include="References\Microsoft.Practices.Prism.dll" />
-    <Content Include="References\Microsoft.Practices.Prism.Interactivity.dll" />
+    <Content Include="Library\Coding4Fun.Phone.Controls.dll" />
+    <Content Include="Library\Coding4Fun.Phone.Controls.Toolkit.dll" />
+    <Content Include="Library\Coding4Fun.Phone.Site.Controls.dll" />
+    <Content Include="Library\Microsoft.Live.Controls.dll" />
+    <Content Include="Library\Microsoft.Live.dll" />
+    <Content Include="Library\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="Library\Microsoft.Practices.Prism.dll" />
+    <Content Include="Library\Microsoft.Practices.Prism.Interactivity.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
