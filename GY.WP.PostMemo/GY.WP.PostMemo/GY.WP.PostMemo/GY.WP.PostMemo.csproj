@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png" />
-    <Content Include="Background.png" />
+    <Resource Include="Background.png" />
     <Content Include="Images\appbar.send.rest.png" />
     <Resource Include="Images\icon173.png" />
     <Resource Include="Images\icon200.png" />
