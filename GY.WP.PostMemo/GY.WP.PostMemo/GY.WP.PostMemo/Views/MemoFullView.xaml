@@ -27,7 +27,7 @@
             <controls:PivotItem Header="{Binding Path=PivotItemHeader_Todo, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <ListBox x:Name="listBoxMemoListTodo"
-                     VerticalAlignment="Top"
+                     VerticalAlignment="Stretch"
                      ItemsSource="{Binding MemoListTodo}"
                      >
                         <ListBox.ItemTemplate>
@@ -74,7 +74,7 @@
             <controls:PivotItem Header="{Binding Path=PivotItemHeader_Done, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <ListBox x:Name="listBoxMemoListDone"
-                     VerticalAlignment="Top"
+                     VerticalAlignment="Stretch"
                      ItemsSource="{Binding MemoListDone}"
                      >
                         <ListBox.ItemTemplate>
@@ -117,7 +117,7 @@
             <controls:PivotItem Header="{Binding Path=PivotItemHeader_All, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <ListBox x:Name="listBoxMemoListAll"
-                     VerticalAlignment="Top"
+                     VerticalAlignment="Stretch"
                      ItemsSource="{Binding MemoListAll}"
                      >
                         <ListBox.ItemTemplate>
