@@ -79,6 +79,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Post Memo.
+        /// </summary>
+        public static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid DateTime Argument.
         /// </summary>
         public static string InvalidDateTimeArgument {
@@ -120,6 +129,33 @@ namespace GY.WP.PostMemo.Localization {
         public static string MsgBox_Exit {
             get {
                 return ResourceManager.GetString("MsgBox_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ALL.
+        /// </summary>
+        public static string PivotItemHeader_All {
+            get {
+                return ResourceManager.GetString("PivotItemHeader_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DONE.
+        /// </summary>
+        public static string PivotItemHeader_Done {
+            get {
+                return ResourceManager.GetString("PivotItemHeader_Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string PivotItemHeader_Todo {
+            get {
+                return ResourceManager.GetString("PivotItemHeader_Todo", resourceCulture);
             }
         }
     }

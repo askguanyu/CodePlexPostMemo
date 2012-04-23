@@ -43,7 +43,13 @@ namespace GY.WP.PostMemo.Views
             this.ApplicationBar.Buttons.Add(appBarPost);
 
             ApplicationBarMenuItem appBarFullView = new ApplicationBarMenuItem(AppResources.AppBar_FullView);
+            appBarFullView.Click += appBarFullView_Click;
             this.ApplicationBar.MenuItems.Add(appBarFullView);
+        }
+
+        private void appBarFullView_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Views/MemoFullView.xaml", UriKind.Relative));
         }
 
         /// <summary>
@@ -54,31 +60,23 @@ namespace GY.WP.PostMemo.Views
         {
             base.OnBackKeyPress(e);
 
-            if (!string.IsNullOrEmpty(this.chatBubbleTextBoxMemo.Text))
+            switch (MessageBox.Show("", AppResources.MsgBox_Exit, MessageBoxButton.OKCancel))
             {
-                this.chatBubbleTextBoxMemo.Text = string.Empty;
-                e.Cancel = true;
-            }
-            else
-            {
-                switch (MessageBox.Show("", AppResources.MsgBox_Exit, MessageBoxButton.OKCancel))
-                {
-                    case MessageBoxResult.Cancel:
-                    case MessageBoxResult.No:
-                    case MessageBoxResult.None:
-                        e.Cancel = true;
-                        break;
-                    case MessageBoxResult.OK:
-                    case MessageBoxResult.Yes:
-                        while (NavigationService.BackStack.Any())
-                        {
-                            NavigationService.RemoveBackEntry();
-                        }
-                        e.Cancel = false;
-                        break;
-                    default:
-                        break;
-                }
+                case MessageBoxResult.Cancel:
+                case MessageBoxResult.No:
+                case MessageBoxResult.None:
+                    e.Cancel = true;
+                    break;
+                case MessageBoxResult.OK:
+                case MessageBoxResult.Yes:
+                    while (NavigationService.BackStack.Any())
+                    {
+                        NavigationService.RemoveBackEntry();
+                    }
+                    e.Cancel = false;
+                    break;
+                default:
+                    break;
             }
         }
 

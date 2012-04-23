@@ -6,10 +6,13 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:localization="clr-namespace:GY.WP.PostMemo.Localization"
+    xmlns:valueConverters="clr-namespace:GY.WP.PostMemo.ValueConverters"
     >
 
     <!--Application Resources-->
     <Application.Resources>
+        <toolkit:DailyDateTimeConverter x:Key="DailyDateTimeConverter"/>
+        <valueConverters:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
         <localization:LocalizedStrings x:Key="LocalizedStrings" />
         <Style x:Key="TransitionPageStyle" TargetType="phone:PhoneApplicationPage">
             <Setter Property="toolkit:TransitionService.NavigationInTransition">

@@ -30,5 +30,25 @@ namespace GY.WP.PostMemo.Localization
         {
             get { return AppResources.MenuItem_Copy; }
         }
+
+        public string AppName
+        {
+            get { return AppResources.AppName; }
+        }
+
+        public string PivotItemHeader_All
+        {
+            get { return AppResources.PivotItemHeader_All; }
+        }
+
+        public string PivotItemHeader_Done
+        {
+            get { return AppResources.PivotItemHeader_Done; }
+        }
+
+        public string PivotItemHeader_Todo
+        {
+            get { return AppResources.PivotItemHeader_Todo; }
+        }
     }
 }

@@ -14,18 +14,13 @@
     shell:SystemTray.IsVisible="True"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:c4fControls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
-    toolkit:TiltEffect.IsTiltEnabled="True" 
-    xmlns:my="clr-namespace:GY.WP.PostMemo.ValueConverters">
-
-    <phone:PhoneApplicationPage.Resources>
-        <toolkit:DailyDateTimeConverter x:Key="DailyDateTimeConverter"/>
-        <my:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
-    </phone:PhoneApplicationPage.Resources>
+    toolkit:TiltEffect.IsTiltEnabled="True"
+    >
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
         <StackPanel x:Name="TitlePanel" VerticalAlignment="Top" Margin="10,0,0,10">
-            <TextBlock x:Name="ApplicationTitle" Text="Post Memo"/>
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=AppName, Source={StaticResource LocalizedStrings}}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Margin="0,30,0,90">
