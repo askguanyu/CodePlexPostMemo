@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DateTimeToStringConverter.cs" company="GY Corporation">
+// <copyright file="DateToStringConverter.cs" company="GY Corporation">
 //     Copyright (c) GY Corporation. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -14,7 +14,7 @@ namespace GY.WP.PostMemo.ValueConverters
     /// <summary>
     ///
     /// </summary>
-    public class DateTimeToStringConverter : IValueConverter
+    public class DateToStringConverter : IValueConverter
     {
         /// <summary>
         /// Converts a
@@ -48,27 +48,24 @@ namespace GY.WP.PostMemo.ValueConverters
 
             if (DateTimeFormatHelper.IsCurrentCultureJapanese() || DateTimeFormatHelper.IsCurrentCultureKorean())
             {
-                result.AppendFormat(CultureInfo.CurrentCulture, "{0} {1} {2} {3}",
+                result.AppendFormat(CultureInfo.CurrentCulture, "{0} {1} {2}",
                                         DateTimeFormatHelper.GetMonthAndDay(given),
-                                        given.Year,
                                         DateTimeFormatHelper.GetAbbreviatedDay(given),
-                                        DateTimeFormatHelper.GetShortTime(given));
+                                        given.Year);
             }
             else if (DateTimeFormatHelper.IsCurrentCultureTurkish())
             {
-                result.AppendFormat(CultureInfo.CurrentCulture, "{0} {1}, {2} {3}",
+                result.AppendFormat(CultureInfo.CurrentCulture, "{0}, {1} {2}",
                                         DateTimeFormatHelper.GetMonthAndDay(given),
-                                        given.Year,
                                         DateTimeFormatHelper.GetAbbreviatedDay(given),
-                                        DateTimeFormatHelper.GetShortTime(given));
+                                        given.Year);
             }
             else
             {
-                result.AppendFormat(CultureInfo.CurrentCulture, "{0} {1} {2}, {3}",
+                result.AppendFormat(CultureInfo.CurrentCulture, "{0} {1} {2}",
                                         DateTimeFormatHelper.GetAbbreviatedDay(given),
                                         DateTimeFormatHelper.GetMonthAndDay(given),
-                                        given.Year,
-                                        DateTimeFormatHelper.GetShortTime(given));
+                                        given.Year);
             }
 
             if (DateTimeFormatHelper.IsCurrentUICultureFrench())

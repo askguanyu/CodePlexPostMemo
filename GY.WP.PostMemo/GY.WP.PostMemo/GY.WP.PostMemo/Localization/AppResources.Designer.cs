@@ -132,6 +132,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Int Argument.
+        /// </summary>
+        public static string InvalidIntArgument {
+            get {
+                return ResourceManager.GetString("InvalidIntArgument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         public static string MenuItem_Copy {
@@ -209,6 +218,15 @@ namespace GY.WP.PostMemo.Localization {
         public static string PivotItemHeader_Todo {
             get {
                 return ResourceManager.GetString("PivotItemHeader_Todo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have {0} memo(s)..
+        /// </summary>
+        public static string StringFormat_Count {
+            get {
+                return ResourceManager.GetString("StringFormat_Count", resourceCulture);
             }
         }
     }

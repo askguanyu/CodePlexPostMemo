@@ -40,7 +40,9 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Application.Resources>
+    <valueConverters:DateToStringConverter x:Key="DateToStringConverter" />
+    <valueConverters:CountToStringConverter x:Key="CountToStringConverter" />
+  </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
         <!--Required object that handles lifetime events for the application-->

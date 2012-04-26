@@ -100,10 +100,13 @@
     </Compile>
     <Compile Include="Localization\LocalizedStrings.cs" />
     <Compile Include="Models\MemoDataContext.cs" />
+    <Compile Include="Models\MemoGroupModel.cs" />
     <Compile Include="Models\MemoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueConverters\CountToStringConverter.cs" />
     <Compile Include="ValueConverters\DateTimeFormatHelper.cs" />
     <Compile Include="ValueConverters\DateTimeToStringConverter.cs" />
+    <Compile Include="ValueConverters\DateToStringConverter.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MemoDesktopViewModel.cs" />

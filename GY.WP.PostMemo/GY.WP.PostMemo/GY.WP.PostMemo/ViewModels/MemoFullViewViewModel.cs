@@ -1,20 +1,18 @@
-﻿using System;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using Microsoft.Practices.Prism.ViewModel;
-using GY.WP.PostMemo.Models;
-using System.Collections.ObjectModel;
-using System.Linq;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="MemoFullViewViewModel.cs" company="GY Corporation">
+//     Copyright (c) GY Corporation. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace GY.WP.PostMemo.ViewModels
 {
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using GY.WP.PostMemo.Models;
+    using Microsoft.Practices.Prism.ViewModel;
+
+    /// <summary>
+    ///
+    /// </summary>
     public class MemoFullViewViewModel : NotificationObject
     {
         /// <summary>
@@ -22,24 +20,36 @@ namespace GY.WP.PostMemo.ViewModels
         /// </summary>
         private MemoDataContext memoDB;
 
+        /// <summary>
+        ///
+        /// </summary>
         public MemoFullViewViewModel()
         {
             memoDB = new MemoDataContext(Constants.DBConnectionString);
             this.LoadDatabase();
         }
 
-        public ObservableCollection<MemoModel> MemoListAll
+        /// <summary>
+        ///Gets or sets
+        /// </summary>
+        public ObservableCollection<MemoGroupModel> MemoGroupListAll
         {
             get;
             set;
         }
 
+        /// <summary>
+        ///Gets or sets
+        /// </summary>
         public ObservableCollection<MemoModel> MemoListDone
         {
             get;
             set;
         }
 
+        /// <summary>
+        ///Gets or sets
+        /// </summary>
         public ObservableCollection<MemoModel> MemoListTodo
         {
             get;
@@ -47,13 +57,20 @@ namespace GY.WP.PostMemo.ViewModels
         }
 
         // Query database and load the collections and list used by the pivot pages.
+
+        /// <summary>
+        ///
+        /// </summary>
         public void LoadDatabase()
         {
-
             var memoInDB = from MemoModel memo in memoDB.MemoTable
                            select memo;
 
-            MemoListAll = new ObservableCollection<MemoModel>(memoInDB);
+            var mempGroup = from MemoModel memo in memoDB.MemoTable
+                            group memo by memo.MemoDateTime.Date into g
+                            select new MemoGroupModel { MemoGroupTitleDate = g.Key, MemoGroupList = new ObservableCollection<MemoModel>(g) };
+
+            MemoGroupListAll = new ObservableCollection<MemoGroupModel>(mempGroup);
             MemoListDone = new ObservableCollection<MemoModel>(memoInDB.Where(p => p.IsComplete));
             MemoListTodo = new ObservableCollection<MemoModel>(memoInDB.Where(p => !p.IsComplete));
         }
@@ -78,9 +95,13 @@ namespace GY.WP.PostMemo.ViewModels
             this.MemoListDone.Add(memoModel);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="memoModel"></param>
         internal void DeleteMemo(MemoModel memoModel)
         {
-            this.MemoListAll.Remove(memoModel);
+            this.MemoGroupListAll.First(p => p.MemoGroupTitleDate.Equals(memoModel.MemoDateTime.Date)).MemoGroupList.Remove(memoModel);
 
             if (memoModel.IsComplete)
             {

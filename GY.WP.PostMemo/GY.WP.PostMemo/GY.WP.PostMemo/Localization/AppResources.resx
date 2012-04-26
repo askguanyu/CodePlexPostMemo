@@ -146,6 +146,9 @@ Full manager your memos;</value>
   <data name="InvalidDateTimeArgument" xml:space="preserve">
     <value>Invalid DateTime Argument</value>
   </data>
+  <data name="InvalidIntArgument" xml:space="preserve">
+    <value>Invalid Int Argument</value>
+  </data>
   <data name="MenuItem_Copy" xml:space="preserve">
     <value>Copy</value>
   </data>
@@ -172,5 +175,8 @@ Full manager your memos;</value>
   </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
     <value>TODO</value>
+  </data>
+  <data name="StringFormat_Count" xml:space="preserve">
+    <value>You have {0} memo(s).</value>
   </data>
 </root>
