@@ -118,68 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppBar_FullView" xml:space="preserve">
-    <value>Full View</value>
+    <value>完整视图</value>
   </data>
   <data name="AppBar_Help" xml:space="preserve">
-    <value>Help</value>
+    <value>帮助</value>
   </data>
   <data name="AppBar_Post" xml:space="preserve">
-    <value>Post</value>
+    <value>保存</value>
   </data>
   <data name="AppFeedback" xml:space="preserve">
-    <value>Feedback</value>
+    <value>反馈</value>
   </data>
   <data name="AppName" xml:space="preserve">
     <value>Post Memo</value>
   </data>
   <data name="AppRoadmap" xml:space="preserve">
-    <value>Roadmap
+    <value>线路图
 
 V 1.2
-Customize different colors for ALL, TODO, DONE
+待定，完成，所有，条目的颜色可以自定义；
 
 V 1.1
-Full view memo list group by date;
+完整视图可以按日期分组；
 
 V 1.0
-Fast launching app;
-Fast record your spark;
-Full manager your memos;</value>
+快速启动程序；
+快速记录您的灵感；
+完整管理备忘记录；</value>
   </data>
   <data name="InvalidDateTimeArgument" xml:space="preserve">
-    <value>Invalid DateTime Argument</value>
+    <value>日期格式不对</value>
   </data>
   <data name="InvalidIntArgument" xml:space="preserve">
-    <value>Invalid Int Argument</value>
+    <value>参数不对</value>
   </data>
   <data name="MenuItem_Copy" xml:space="preserve">
-    <value>Copy</value>
+    <value>复制</value>
   </data>
   <data name="MenuItem_Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>删除</value>
   </data>
   <data name="MenuItem_Done" xml:space="preserve">
-    <value>Done</value>
+    <value>完成</value>
   </data>
   <data name="MsgBox_Exit" xml:space="preserve">
-    <value>Exit ?</value>
+    <value>退出？</value>
   </data>
   <data name="PivotItemHeader_About" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="PivotItemHeader_All" xml:space="preserve">
-    <value>ALL</value>
+    <value>所有</value>
   </data>
   <data name="PivotItemHeader_Done" xml:space="preserve">
-    <value>DONE</value>
+    <value>完成</value>
   </data>
   <data name="PivotItemHeader_Help" xml:space="preserve">
-    <value>Help</value>
+    <value>帮助</value>
   </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
-    <value>TODO</value>
+    <value>待定</value>
   </data>
   <data name="StringFormat_Count" xml:space="preserve">
-    <value>You have {0} memo(s).</value>
+    <value>您有 {0} 条备忘记录。</value>
   </data>
 </root>

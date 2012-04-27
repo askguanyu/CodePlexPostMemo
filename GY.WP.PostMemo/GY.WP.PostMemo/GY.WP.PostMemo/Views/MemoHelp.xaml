@@ -44,7 +44,7 @@
                         <Button Width="220" Margin="0,20,0,0" HorizontalAlignment="Center" Name="buttonFeedback" Click="buttonFeedback_Click" Content="{Binding Path=AppFeedback, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" BorderThickness="1" />
                     </StackPanel>
                     <ScrollViewer Grid.Row="1">
-                        <TextBlock Name="textBlockRoadmap" FontSize="{StaticResource PhoneFontSizeMedium}" />
+                        <TextBlock Name="textBlockRoadmap" TextWrapping="Wrap" FontSize="{StaticResource PhoneFontSizeMedium}" />
                     </ScrollViewer>
                 </Grid>
             </controls:PivotItem>

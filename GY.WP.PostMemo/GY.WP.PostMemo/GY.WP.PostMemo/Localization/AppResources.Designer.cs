@@ -108,6 +108,9 @@ namespace GY.WP.PostMemo.Localization {
         /// <summary>
         ///   Looks up a localized string similar to Roadmap
         ///
+        ///V 1.2
+        ///Customize different colors for ALL, TODO, DONE
+        ///
         ///V 1.1
         ///Full view memo list group by date;
         ///

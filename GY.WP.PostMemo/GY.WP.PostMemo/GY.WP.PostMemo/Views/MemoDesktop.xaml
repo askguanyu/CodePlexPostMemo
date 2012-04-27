@@ -19,11 +19,11 @@
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
-        <StackPanel x:Name="TitlePanel" VerticalAlignment="Top" Margin="10,0,0,10">
+        <StackPanel x:Name="TitlePanel" VerticalAlignment="Top" Margin="24,17,0,10">
             <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=AppName, Source={StaticResource LocalizedStrings}}"/>
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Margin="0,30,0,90">
+        <Grid x:Name="ContentPanel" Margin="0,50,0,90">
             <ListBox x:Name="listBoxMemoList"
                      VerticalAlignment="Bottom"
                      ItemsSource="{Binding MemoList}"
