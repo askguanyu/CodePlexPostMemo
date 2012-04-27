@@ -61,6 +61,11 @@ namespace GY.WP.PostMemo.Localization
             get { return AppResources.PivotItemHeader_About; }
         }
 
+        public string PivotItemHeader_Settings
+        {
+            get { return AppResources.PivotItemHeader_Settings; }
+        }
+
         public string AppFeedback
         {
             get { return AppResources.AppFeedback; }

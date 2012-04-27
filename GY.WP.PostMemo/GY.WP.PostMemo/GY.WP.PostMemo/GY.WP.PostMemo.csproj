@@ -125,8 +125,8 @@
     <Compile Include="Views\MemoFullView.xaml.cs">
       <DependentUpon>MemoFullView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MemoHelp.xaml.cs">
-      <DependentUpon>MemoHelp.xaml</DependentUpon>
+    <Compile Include="Views\MemoSettings.xaml.cs">
+      <DependentUpon>MemoSettings.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -142,7 +142,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MemoHelp.xaml">
+    <Page Include="Views\MemoSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

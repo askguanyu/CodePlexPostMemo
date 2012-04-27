@@ -45,7 +45,7 @@ namespace GY.WP.PostMemo.Views
         {
             this.ApplicationBar = new ApplicationBar();
 
-            ApplicationBarIconButton appBarHelp = new ApplicationBarIconButton(new Uri("/Images/appbar.questionmark.rest.png", UriKind.Relative)) { Text = AppResources.AppBar_Help };
+            ApplicationBarIconButton appBarHelp = new ApplicationBarIconButton(new Uri("/Images/appbar.feature.settings.rest.png", UriKind.Relative)) { Text = AppResources.AppBar_Help };
             appBarHelp.Click += new EventHandler(appBarHelp_Click);
             this.ApplicationBar.Buttons.Add(appBarHelp);
         }
@@ -57,7 +57,7 @@ namespace GY.WP.PostMemo.Views
         /// <param name="e"></param>
         private void appBarHelp_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/MemoHelp.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/MemoSettings", UriKind.Relative));
         }
 
         /// <summary>

@@ -176,6 +176,9 @@ Full manager your memos;</value>
   <data name="PivotItemHeader_Help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="PivotItemHeader_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
     <value>TODO</value>
   </data>

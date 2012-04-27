@@ -176,6 +176,9 @@ V 1.0
   <data name="PivotItemHeader_Help" xml:space="preserve">
     <value>帮助</value>
   </data>
+  <data name="PivotItemHeader_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
     <value>待定</value>
   </data>

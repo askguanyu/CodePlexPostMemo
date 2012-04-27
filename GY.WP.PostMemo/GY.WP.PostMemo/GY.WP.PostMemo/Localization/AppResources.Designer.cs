@@ -216,6 +216,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string PivotItemHeader_Settings {
+            get {
+                return ResourceManager.GetString("PivotItemHeader_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
         public static string PivotItemHeader_Todo {
