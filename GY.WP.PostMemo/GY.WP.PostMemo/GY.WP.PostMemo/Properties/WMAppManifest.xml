@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{58aad38c-e9ea-49b6-a7c8-f79cdbf98a10}" Title="+ Post Memo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="GY.WP.PostMemo author" Description="Sample description" Publisher="GY.WP.PostMemo">
+  <App xmlns="" ProductID="{58aad38c-e9ea-49b6-a7c8-f79cdbf98a10}" Title="+ Post Memo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="GY" Description="Fast record your spark" Publisher="GY">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
         <Capability Name="ID_CAP_MEDIALIB"/>
