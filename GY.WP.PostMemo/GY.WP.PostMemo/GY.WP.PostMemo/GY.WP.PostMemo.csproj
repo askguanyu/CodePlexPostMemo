@@ -17,7 +17,7 @@
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
     <SupportedCultures>
-      <SupportedCultures>zh-CN;en-US;</SupportedCultures>
+      <SupportedCultures>en-US;zh-CN;</SupportedCultures>
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
