@@ -126,6 +126,9 @@
   <data name="AppBar_Post" xml:space="preserve">
     <value>保存</value>
   </data>
+  <data name="AppBar_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
   <data name="AppFeedback" xml:space="preserve">
     <value>反馈</value>
   </data>
@@ -181,6 +184,39 @@ V 1.0
   </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
     <value>待定</value>
+  </data>
+  <data name="Settings_Color_blue" xml:space="preserve">
+    <value>蓝</value>
+  </data>
+  <data name="Settings_Color_brown" xml:space="preserve">
+    <value>褐</value>
+  </data>
+  <data name="Settings_Color_green" xml:space="preserve">
+    <value>绿</value>
+  </data>
+  <data name="Settings_Color_lime" xml:space="preserve">
+    <value>黄绿</value>
+  </data>
+  <data name="Settings_Color_magenta" xml:space="preserve">
+    <value>洋红</value>
+  </data>
+  <data name="Settings_Color_mango" xml:space="preserve">
+    <value>橙</value>
+  </data>
+  <data name="Settings_Color_pink" xml:space="preserve">
+    <value>粉红</value>
+  </data>
+  <data name="Settings_Color_purple" xml:space="preserve">
+    <value>紫</value>
+  </data>
+  <data name="Settings_Color_red" xml:space="preserve">
+    <value>红</value>
+  </data>
+  <data name="Settings_Color_system" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="Settings_Color_teal" xml:space="preserve">
+    <value>青</value>
   </data>
   <data name="StringFormat_Count" xml:space="preserve">
     <value>您有 {0} 条备忘记录。</value>

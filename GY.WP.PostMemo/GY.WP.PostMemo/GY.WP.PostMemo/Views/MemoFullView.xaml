@@ -27,42 +27,43 @@
             <controls:PivotItem Header="{Binding Path=PivotItemHeader_Todo, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <ListBox x:Name="listBoxMemoListTodo"
-                     VerticalAlignment="Stretch"
-                     ItemsSource="{Binding MemoListTodo}"
-                     >
+                             VerticalAlignment="Stretch"
+                             ItemsSource="{Binding MemoListTodo}"
+                             >
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <c4fControls:ChatBubble Margin="10,0,10,20"
-                                                Name="chatBubbleDisplayMemo"
-                                                Width="440"
-                                                ChatBubbleDirection="LowerRight">
+                                                        Name="chatBubbleDisplayMemo"
+                                                        Width="440"
+                                                        ChatBubbleDirection="LowerRight"
+                                                        >
                                     <toolkit:ContextMenuService.ContextMenu>
                                         <toolkit:ContextMenu>
                                             <toolkit:MenuItem Name="menuItemCopy"
-                                                      Header="{Binding Path=MenuItem_Copy, Source={StaticResource LocalizedStrings}}"
-                                                      Tap="menuItemCopy_Tap"
-                                                      CommandParameter="{Binding}"/>
+                                                              Header="{Binding Path=MenuItem_Copy, Source={StaticResource LocalizedStrings}}"
+                                                              Tap="menuItemCopy_Tap"
+                                                              CommandParameter="{Binding}"/>
                                             <toolkit:MenuItem Name="menuItemDone"
-                                                      Header="{Binding Path=MenuItem_Done, Source={StaticResource LocalizedStrings}}"
-                                                      Tap="menuItemDone_Tap"
-                                                      CommandParameter="{Binding}"/>
+                                                              Header="{Binding Path=MenuItem_Done, Source={StaticResource LocalizedStrings}}"
+                                                              Tap="menuItemDone_Tap"
+                                                              CommandParameter="{Binding}"/>
                                             <toolkit:MenuItem Name="menuItemDelete"
-                                                      Header="{Binding Path=MenuItem_Delete, Source={StaticResource LocalizedStrings}}"
-                                                      Tap="menuItemDelete_Tap"
-                                                      CommandParameter="{Binding}"/>
+                                                              Header="{Binding Path=MenuItem_Delete, Source={StaticResource LocalizedStrings}}"
+                                                              Tap="menuItemDelete_Tap"
+                                                              CommandParameter="{Binding}"/>
                                         </toolkit:ContextMenu>
                                     </toolkit:ContextMenuService.ContextMenu>
                                     <StackPanel>
                                         <TextBlock Text="{Binding MemoContent}"
-                                           Name="textBlockContent"
-                                           Foreground="LightYellow"
-                                           TextWrapping="Wrap"/>
+                                                   Name="textBlockContent"
+                                                   Foreground="LightYellow"
+                                                   TextWrapping="Wrap"/>
                                         <TextBlock Text="{Binding MemoDateTime, Converter={StaticResource DateTimeToStringConverter}}"
-                                           FontSize="16"
-                                           TextAlignment="Right"
-                                           HorizontalAlignment="Right"
-                                           Foreground="LightYellow"
-                                           Width="440"/>
+                                                   FontSize="16"
+                                                   TextAlignment="Right"
+                                                   HorizontalAlignment="Right"
+                                                   Foreground="LightYellow"
+                                                   Width="440"/>
                                     </StackPanel>
                                 </c4fControls:ChatBubble>
                             </DataTemplate>
@@ -74,38 +75,38 @@
             <controls:PivotItem Header="{Binding Path=PivotItemHeader_Done, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <ListBox x:Name="listBoxMemoListDone"
-                     VerticalAlignment="Stretch"
-                     ItemsSource="{Binding MemoListDone}"
-                     >
+                             VerticalAlignment="Stretch"
+                             ItemsSource="{Binding MemoListDone}"
+                             >
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <c4fControls:ChatBubble Margin="10,0,10,20"
-                                                Name="chatBubbleDisplayMemo"
-                                                Width="440"
-                                                ChatBubbleDirection="LowerRight">
+                                                        Name="chatBubbleDisplayMemo"
+                                                        Width="440"
+                                                        ChatBubbleDirection="LowerRight">
                                     <toolkit:ContextMenuService.ContextMenu>
                                         <toolkit:ContextMenu>
                                             <toolkit:MenuItem Name="menuItemCopy"
-                                                      Header="{Binding Path=MenuItem_Copy, Source={StaticResource LocalizedStrings}}"
-                                                      Tap="menuItemCopy_Tap"
-                                                      CommandParameter="{Binding}"/>
+                                                              Header="{Binding Path=MenuItem_Copy, Source={StaticResource LocalizedStrings}}"
+                                                              Tap="menuItemCopy_Tap"
+                                                              CommandParameter="{Binding}"/>
                                             <toolkit:MenuItem Name="menuItemDelete"
                                                       Header="{Binding Path=MenuItem_Delete, Source={StaticResource LocalizedStrings}}"
-                                                      Tap="menuItemDelete_Tap"
-                                                      CommandParameter="{Binding}"/>
+                                                              Tap="menuItemDelete_Tap"
+                                                              CommandParameter="{Binding}"/>
                                         </toolkit:ContextMenu>
                                     </toolkit:ContextMenuService.ContextMenu>
                                     <StackPanel>
                                         <TextBlock Text="{Binding MemoContent}"
-                                           Name="textBlockContent"
-                                           Foreground="LightYellow"
-                                           TextWrapping="Wrap"/>
+                                                   Name="textBlockContent"
+                                                   Foreground="LightYellow"
+                                                   TextWrapping="Wrap"/>
                                         <TextBlock Text="{Binding MemoDateTime, Converter={StaticResource DateTimeToStringConverter}}"
-                                           FontSize="16"
-                                           TextAlignment="Right"
-                                           HorizontalAlignment="Right"
-                                           Foreground="LightYellow"
-                                           Width="440"/>
+                                                   FontSize="16"
+                                                   TextAlignment="Right"
+                                                   HorizontalAlignment="Right"
+                                                   Foreground="LightYellow"
+                                                   Width="440"/>
                                     </StackPanel>
                                 </c4fControls:ChatBubble>
                             </DataTemplate>
@@ -139,10 +140,10 @@
                                         <DataTemplate>
                                             <Grid Margin="0,0,0,12" Width="440" Background="{StaticResource PhoneAccentBrush}">
                                                 <TextBlock Text="{Binding MemoGroupTitleDate, Converter={StaticResource DateToStringConverter}}"
-                                                       Margin="12,4,0,4"
-                                                       Foreground="{StaticResource PhoneForegroundBrush}"
-                                                       FontSize="{StaticResource PhoneFontSizeLarge}"
-                                                       FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
+                                                           Margin="12,4,0,4"
+                                                           Foreground="{StaticResource PhoneForegroundBrush}"
+                                                           FontSize="{StaticResource PhoneFontSizeLarge}"
+                                                           FontFamily="{StaticResource PhoneFontFamilySemiLight}"/>
                                             </Grid>
                                         </DataTemplate>
                                     </toolkit:ExpanderView.HeaderTemplate>
@@ -212,5 +213,5 @@
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>-->
-    
+
 </phone:PhoneApplicationPage>

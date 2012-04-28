@@ -88,6 +88,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string AppBar_Settings {
+            get {
+                return ResourceManager.GetString("AppBar_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Feedback.
         /// </summary>
         public static string AppFeedback {
@@ -230,6 +239,105 @@ namespace GY.WP.PostMemo.Localization {
         public static string PivotItemHeader_Todo {
             get {
                 return ResourceManager.GetString("PivotItemHeader_Todo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to blue.
+        /// </summary>
+        public static string Settings_Color_blue {
+            get {
+                return ResourceManager.GetString("Settings_Color_blue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to brown.
+        /// </summary>
+        public static string Settings_Color_brown {
+            get {
+                return ResourceManager.GetString("Settings_Color_brown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to green.
+        /// </summary>
+        public static string Settings_Color_green {
+            get {
+                return ResourceManager.GetString("Settings_Color_green", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lime.
+        /// </summary>
+        public static string Settings_Color_lime {
+            get {
+                return ResourceManager.GetString("Settings_Color_lime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to magenta.
+        /// </summary>
+        public static string Settings_Color_magenta {
+            get {
+                return ResourceManager.GetString("Settings_Color_magenta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mango.
+        /// </summary>
+        public static string Settings_Color_mango {
+            get {
+                return ResourceManager.GetString("Settings_Color_mango", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pink.
+        /// </summary>
+        public static string Settings_Color_pink {
+            get {
+                return ResourceManager.GetString("Settings_Color_pink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to purple.
+        /// </summary>
+        public static string Settings_Color_purple {
+            get {
+                return ResourceManager.GetString("Settings_Color_purple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to red.
+        /// </summary>
+        public static string Settings_Color_red {
+            get {
+                return ResourceManager.GetString("Settings_Color_red", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to system.
+        /// </summary>
+        public static string Settings_Color_system {
+            get {
+                return ResourceManager.GetString("Settings_Color_system", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to teal.
+        /// </summary>
+        public static string Settings_Color_teal {
+            get {
+                return ResourceManager.GetString("Settings_Color_teal", resourceCulture);
             }
         }
         

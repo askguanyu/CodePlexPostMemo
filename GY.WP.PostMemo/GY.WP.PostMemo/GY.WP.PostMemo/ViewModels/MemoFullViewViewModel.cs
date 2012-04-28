@@ -9,6 +9,8 @@ namespace GY.WP.PostMemo.ViewModels
     using System.Linq;
     using GY.WP.PostMemo.Models;
     using Microsoft.Practices.Prism.ViewModel;
+    using System.Windows.Media;
+    using GY.WP.PostMemo.ValueConverters;
 
     /// <summary>
     ///
@@ -73,6 +75,14 @@ namespace GY.WP.PostMemo.ViewModels
             MemoGroupListAll = new ObservableCollection<MemoGroupModel>(mempGroup);
             MemoListDone = new ObservableCollection<MemoModel>(memoInDB.Where(p => p.IsComplete));
             MemoListTodo = new ObservableCollection<MemoModel>(memoInDB.Where(p => !p.IsComplete));
+        }
+
+        public SolidColorBrush MemoListTodoColor
+        {
+            get
+            {
+                return AccentColorNameToBrushConverter.ColorNameToBrushDictionary.Values.ToArray()[1];
+            }
         }
 
         /// <summary>

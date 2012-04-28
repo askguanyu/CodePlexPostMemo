@@ -126,6 +126,9 @@
   <data name="AppBar_Post" xml:space="preserve">
     <value>Post</value>
   </data>
+  <data name="AppBar_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="AppFeedback" xml:space="preserve">
     <value>Feedback</value>
   </data>
@@ -181,6 +184,39 @@ Full manager your memos;</value>
   </data>
   <data name="PivotItemHeader_Todo" xml:space="preserve">
     <value>TODO</value>
+  </data>
+  <data name="Settings_Color_blue" xml:space="preserve">
+    <value>blue</value>
+  </data>
+  <data name="Settings_Color_brown" xml:space="preserve">
+    <value>brown</value>
+  </data>
+  <data name="Settings_Color_green" xml:space="preserve">
+    <value>green</value>
+  </data>
+  <data name="Settings_Color_lime" xml:space="preserve">
+    <value>lime</value>
+  </data>
+  <data name="Settings_Color_magenta" xml:space="preserve">
+    <value>magenta</value>
+  </data>
+  <data name="Settings_Color_mango" xml:space="preserve">
+    <value>mango</value>
+  </data>
+  <data name="Settings_Color_pink" xml:space="preserve">
+    <value>pink</value>
+  </data>
+  <data name="Settings_Color_purple" xml:space="preserve">
+    <value>purple</value>
+  </data>
+  <data name="Settings_Color_red" xml:space="preserve">
+    <value>red</value>
+  </data>
+  <data name="Settings_Color_system" xml:space="preserve">
+    <value>system</value>
+  </data>
+  <data name="Settings_Color_teal" xml:space="preserve">
+    <value>teal</value>
   </data>
   <data name="StringFormat_Count" xml:space="preserve">
     <value>You have {0} memo(s).</value>

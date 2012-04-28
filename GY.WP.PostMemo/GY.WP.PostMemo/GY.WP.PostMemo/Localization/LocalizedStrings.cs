@@ -70,5 +70,10 @@ namespace GY.WP.PostMemo.Localization
         {
             get { return AppResources.AppFeedback; }
         }
+
+        public string AppRoadmap
+        {
+            get { return AppResources.AppRoadmap; }
+        }
     }
 }

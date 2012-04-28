@@ -42,6 +42,7 @@
         </Style>
     <valueConverters:DateToStringConverter x:Key="DateToStringConverter" />
     <valueConverters:CountToStringConverter x:Key="CountToStringConverter" />
+    <valueConverters:AccentColorNameToBrushConverter x:Key="AccentColorNameToBrushConverter" />
   </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

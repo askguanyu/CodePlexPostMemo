@@ -8,6 +8,7 @@ namespace GY.WP.PostMemo.Views
     using System.Reflection;
     using System.Windows;
     using GY.WP.PostMemo.Localization;
+    using GY.WP.PostMemo.ViewModels;
     using Microsoft.Phone.Controls;
     using Microsoft.Phone.Tasks;
 
@@ -22,8 +23,17 @@ namespace GY.WP.PostMemo.Views
         public MemoSettings()
         {
             InitializeComponent();
-            Dispatcher.BeginInvoke(() => { textBlockVersion.Text = "V " + Assembly.GetExecutingAssembly().FullName.Split(',')[1].Split('=')[1]; });
-            Dispatcher.BeginInvoke(() => { textBlockRoadmap.Text = AppResources.AppRoadmap; });
+            this.ViewModel = new MemoSettingsViewModel();
+            this.DataContext = this.ViewModel;
+        }
+
+        /// <summary>
+        ///Gets or sets
+        /// </summary>
+        public MemoSettingsViewModel ViewModel
+        {
+            get;
+            private set;
         }
 
         /// <summary>
