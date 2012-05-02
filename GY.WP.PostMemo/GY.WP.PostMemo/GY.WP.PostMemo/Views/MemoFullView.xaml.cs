@@ -38,6 +38,12 @@ namespace GY.WP.PostMemo.Views
             private set;
         }
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            this.ViewModel.InitializeColors();
+        }
+
         /// <summary>
         ///
         /// </summary>

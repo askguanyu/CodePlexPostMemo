@@ -32,13 +32,67 @@
                         <RowDefinition Height="120" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <TextBlock Text="Change your memo list accent color" Margin="12"/>
+                    <TextBlock Text="Change your memo list backgroud color" Margin="12"/>
                     <toolkit:ListPicker ItemsSource="{Binding AccentColorList}"
                                         Header="{Binding Path=PivotItemHeader_Todo, Source={StaticResource LocalizedStrings}}"
                                         FullModeHeader="{Binding Path=PivotItemHeader_Todo, Source={StaticResource LocalizedStrings}}"
                                         SelectedIndex="{Binding TodoMemoListColorSelectedIndex, Mode=TwoWay}"
                                         CacheMode="BitmapCache"
                                         Grid.Row="1"
+                                        >
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Rectangle Fill="{Binding ColorName, Converter={StaticResource AccentColorNameToBrushConverter}}" Width="24" Height="24"/>
+                                    <TextBlock Text="{Binding ColorDisplayName}" Margin="12, 0, 0, 0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 20">
+                                    <Rectangle Fill="{Binding ColorName, Converter={StaticResource AccentColorNameToBrushConverter}}" Width="43" Height="43"/>
+                                    <TextBlock Text="{Binding ColorDisplayName}"
+                                               Margin="16 0 0 0"
+                                               FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                                               FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>
+                    <toolkit:ListPicker ItemsSource="{Binding AccentColorList}"
+                                        Header="{Binding Path=PivotItemHeader_Done, Source={StaticResource LocalizedStrings}}"
+                                        FullModeHeader="{Binding Path=PivotItemHeader_Done, Source={StaticResource LocalizedStrings}}"
+                                        SelectedIndex="{Binding DoneMemoListColorSelectedIndex, Mode=TwoWay}"
+                                        CacheMode="BitmapCache"
+                                        Grid.Row="2"
+                                        >
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Rectangle Fill="{Binding ColorName, Converter={StaticResource AccentColorNameToBrushConverter}}" Width="24" Height="24"/>
+                                    <TextBlock Text="{Binding ColorDisplayName}" Margin="12, 0, 0, 0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 20">
+                                    <Rectangle Fill="{Binding ColorName, Converter={StaticResource AccentColorNameToBrushConverter}}" Width="43" Height="43"/>
+                                    <TextBlock Text="{Binding ColorDisplayName}"
+                                               Margin="16 0 0 0"
+                                               FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                                               FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>
+                    <toolkit:ListPicker ItemsSource="{Binding AccentColorList}"
+                                        Header="{Binding Path=PivotItemHeader_All, Source={StaticResource LocalizedStrings}}"
+                                        FullModeHeader="{Binding Path=PivotItemHeader_All, Source={StaticResource LocalizedStrings}}"
+                                        SelectedIndex="{Binding AllMemoListColorSelectedIndex, Mode=TwoWay}"
+                                        CacheMode="BitmapCache"
+                                        Grid.Row="3"
                                         >
                         <toolkit:ListPicker.ItemTemplate>
                             <DataTemplate>

@@ -11,6 +11,7 @@ namespace GY.WP.PostMemo.ViewModels
     using Microsoft.Practices.Prism.ViewModel;
     using System.Windows.Media;
     using GY.WP.PostMemo.ValueConverters;
+    using GY.WP.ToolKit.Utility;
 
     /// <summary>
     ///
@@ -32,9 +33,11 @@ namespace GY.WP.PostMemo.ViewModels
             this.InitializeColors();
         }
 
-        private void InitializeColors()
+        public void InitializeColors()
         {
-            this.MemoListTodoBackground = new SolidColorBrush(Colors.Green);
+            this.MemoListTodoBackground = AccentColorNameToBrushConverter.ColorNameToBrushDictionary[(IsolatedSettingsUtility.GetValue<ColorModel>(Constants.KeyTodoMemoListColor) ?? new ColorModel()).ColorName];
+            this.MemoListDoneBackground = AccentColorNameToBrushConverter.ColorNameToBrushDictionary[(IsolatedSettingsUtility.GetValue<ColorModel>(Constants.KeyDoneMemoListColor) ?? new ColorModel()).ColorName];
+            this.MemoListAllBackground = AccentColorNameToBrushConverter.ColorNameToBrushDictionary[(IsolatedSettingsUtility.GetValue<ColorModel>(Constants.KeyAllMemoListColor) ?? new ColorModel()).ColorName];
         }
 
         /// <summary>
@@ -76,6 +79,36 @@ namespace GY.WP.PostMemo.ViewModels
             {
                 this._memoListTodoBackground = value;
                 RaisePropertyChanged(() => MemoListTodoBackground);
+            }
+        }
+
+        private SolidColorBrush _memoListDoneBackground;
+
+        public SolidColorBrush MemoListDoneBackground
+        {
+            get
+            {
+                return this._memoListDoneBackground;
+            }
+            set
+            {
+                this._memoListDoneBackground = value;
+                RaisePropertyChanged(() => MemoListDoneBackground);
+            }
+        }
+
+        private SolidColorBrush _memoListAllBackground;
+
+        public SolidColorBrush MemoListAllBackground
+        {
+            get
+            {
+                return this._memoListAllBackground;
+            }
+            set
+            {
+                this._memoListAllBackground = value;
+                RaisePropertyChanged(() => MemoListAllBackground);
             }
         }
 

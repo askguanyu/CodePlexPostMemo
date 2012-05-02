@@ -86,7 +86,9 @@
                                 <c4fControls:ChatBubble Margin="10,0,10,20"
                                                         Name="chatBubbleDisplayMemo"
                                                         Width="440"
-                                                        ChatBubbleDirection="LowerRight">
+                                                        ChatBubbleDirection="LowerRight"
+                                                        Background="{Binding DataContext.MemoListDoneBackground, ElementName=phoneApplicationPagememoFullView}"
+                                                        >
                                     <toolkit:ContextMenuService.ContextMenu>
                                         <toolkit:ContextMenu>
                                             <toolkit:MenuItem Name="menuItemCopy"
@@ -138,10 +140,12 @@
                                                       Expander="{Binding}"
                                                       Margin="0,0,0,20"
                                                       >
-
                                     <toolkit:ExpanderView.HeaderTemplate>
                                         <DataTemplate>
-                                            <Grid Margin="0,0,0,12" Width="440" Background="{StaticResource PhoneAccentBrush}">
+                                            <Grid Margin="0,0,0,12"
+                                                  Width="440"
+                                                  Background="{Binding DataContext.MemoListAllBackground, ElementName=phoneApplicationPagememoFullView}"
+                                                  >
                                                 <TextBlock Text="{Binding MemoGroupTitleDate, Converter={StaticResource DateToStringConverter}}"
                                                            Margin="12,4,0,4"
                                                            Foreground="{StaticResource PhoneForegroundBrush}"
@@ -166,7 +170,9 @@
                                             <ListBoxItem>
                                                 <c4fControls:ChatBubble Margin="0,20,18,0"
                                                                         Name="chatBubbleDisplayMemo"
-                                                                        ChatBubbleDirection="LowerRight">
+                                                                        ChatBubbleDirection="LowerRight"
+                                                                        Background="{Binding DataContext.MemoListAllBackground, ElementName=phoneApplicationPagememoFullView}"
+                                                                        >
                                                     <toolkit:ContextMenuService.ContextMenu>
                                                         <toolkit:ContextMenu>
                                                             <toolkit:MenuItem Name="menuItemCopy"
