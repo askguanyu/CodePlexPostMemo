@@ -342,6 +342,15 @@ namespace GY.WP.PostMemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change your memo lists backgroud color..
+        /// </summary>
+        public static string Settings_Color_Title {
+            get {
+                return ResourceManager.GetString("Settings_Color_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have {0} memo(s)..
         /// </summary>
         public static string StringFormat_Count {

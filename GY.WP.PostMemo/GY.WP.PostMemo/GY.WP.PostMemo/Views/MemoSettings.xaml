@@ -32,7 +32,7 @@
                         <RowDefinition Height="120" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <TextBlock Text="Change your memo list backgroud color" Margin="12"/>
+                    <TextBlock Text="{Binding Path=Settings_Color_Title, Source={StaticResource LocalizedStrings}}" Margin="12"/>
                     <toolkit:ListPicker ItemsSource="{Binding AccentColorList}"
                                         Header="{Binding Path=PivotItemHeader_Todo, Source={StaticResource LocalizedStrings}}"
                                         FullModeHeader="{Binding Path=PivotItemHeader_Todo, Source={StaticResource LocalizedStrings}}"

@@ -75,5 +75,10 @@ namespace GY.WP.PostMemo.Localization
         {
             get { return AppResources.AppRoadmap; }
         }
+
+        public string Settings_Color_Title
+        {
+            get { return AppResources.Settings_Color_Title; }
+        }
     }
 }

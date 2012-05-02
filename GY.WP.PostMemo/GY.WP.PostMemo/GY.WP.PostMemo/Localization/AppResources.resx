@@ -218,6 +218,9 @@ Full manager your memos;</value>
   <data name="Settings_Color_teal" xml:space="preserve">
     <value>teal</value>
   </data>
+  <data name="Settings_Color_Title" xml:space="preserve">
+    <value>Change your memo lists backgroud color.</value>
+  </data>
   <data name="StringFormat_Count" xml:space="preserve">
     <value>You have {0} memo(s).</value>
   </data>
