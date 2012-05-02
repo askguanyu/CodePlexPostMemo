@@ -29,6 +29,12 @@ namespace GY.WP.PostMemo.ViewModels
         {
             memoDB = new MemoDataContext(Constants.DBConnectionString);
             this.LoadDatabase();
+            this.InitializeColors();
+        }
+
+        private void InitializeColors()
+        {
+            this.MemoListTodoBackground = new SolidColorBrush(Colors.Green);
         }
 
         /// <summary>
@@ -58,10 +64,23 @@ namespace GY.WP.PostMemo.ViewModels
             set;
         }
 
-        // Query database and load the collections and list used by the pivot pages.
+        private SolidColorBrush _memoListTodoBackground;
+
+        public SolidColorBrush MemoListTodoBackground
+        {
+            get
+            {
+                return this._memoListTodoBackground;
+            }
+            set
+            {
+                this._memoListTodoBackground = value;
+                RaisePropertyChanged(() => MemoListTodoBackground);
+            }
+        }
 
         /// <summary>
-        ///
+        /// Query database and load the collections and list used by the pivot pages.
         /// </summary>
         public void LoadDatabase()
         {
