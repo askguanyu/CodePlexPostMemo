@@ -117,13 +117,13 @@
                 </Grid>
             </controls:PivotItem>
 
-            <controls:PivotItem Header="{Binding Path=PivotItemHeader_Help, Source={StaticResource LocalizedStrings}}">
+            <!--<controls:PivotItem Header="{Binding Path=PivotItemHeader_Help, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <TextBlock FontSize="{StaticResource PhoneFontSizeExtraLarge}" TextWrapping="Wrap">
                         Fast record your spark; Full manager your memos;
                     </TextBlock>
                 </Grid>
-            </controls:PivotItem>
+            </controls:PivotItem>-->
 
             <controls:PivotItem Header="{Binding Path=PivotItemHeader_About, Source={StaticResource LocalizedStrings}}">
                 <Grid>
